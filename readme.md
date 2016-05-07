@@ -1,6 +1,7 @@
 # Colorhole
 Colorhole is an pretty simple, lightweight, dependency-free library which allows you to manage color like it can be done for any other default data type.
 Library allows work with HEX colors (16 and 256 colors as well) but data can be easily exported as HEX and RGBA.
+You can try it http://tryshchenko.com/examples/colorhole
 Library can:
   * Make a color lighter
   * Make a color darken
