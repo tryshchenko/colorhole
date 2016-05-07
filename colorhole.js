@@ -128,7 +128,7 @@ var Colorhole = (function(){
 		 */
 		toString: function() {
 			this.schema.forEach(function(chanel){
-				this[chanel] = this.makeHexademical	(this[chanel]);
+				this[chanel] = this.makeHexademical(this[chanel]);
 			}.bind(this));
 			this.color = '#' + this.red + this.green + this.blue;
 		},
