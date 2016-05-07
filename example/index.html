@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Colorhole example</title>
+	<!-- Scripts -->
+	<script src="../colorhole.js"></script>
+	<script src="example.js"></script>
+	<!-- Styles -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="row">
+		<div class="container">
+			<div class="col col-md-6">
+				<h1>Colorhole example</h1>
+				<a href="https://github.com/ensaier/colorhole" class="btn btn-primary" target="_blank">Read on GitHub</a>
+				<a href="http://tryshchenko.com" class="btn btn-primary" target="_blank">Read my blog</a>
+			</div>
+		</div>
+		<hr>
+		<div class="container">
+			<div class="col col-md-5">
+				<label for="color-selector">Please select the color code</label>
+				<input type="text" placeholder="Type color code" value="#000000" id="color-selector" class="form-control">
+			</div>
+			<div class="col col-md-12">
+				<table class="table">
+					<thead>
+						<th>Method</th>
+						<th>Result</th>
+						<th>Sample</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>darken()</td>
+							<td id="result-darken-optionless"></td>
+							<td id="example-darken-optionless"></td>
+						</tr>
+						<tr>
+							<td>darken(3)</td>
+							<td id="result-darken-option"></td>
+							<td id="example-darken-option"></td>
+						</tr>
+						<tr>
+							<td>lighter()</td>
+							<td id="result-lighter-optionless"></td>
+							<td id="example-lighter-optionless"></td>
+						</tr>
+						<tr>
+							<td>lighter(3)</td>
+							<td id="result-lighter-option"></td>
+							<td id="example-lighter-option"></td>
+						</tr>
+						<tr>
+							<td>inverse()</td>
+							<td id="result-inverse-optionless"></td>
+							<td id="example-inverse-optionless"></td>
+						</tr>
+						<tr>
+							<td>grayscale()</td>
+							<td id="result-grayscale-optionless"></td>
+							<td id="example-grayscale-optionless"></td>
+						</tr>
+						<tr>
+							<td>toRGBA(0.5)</td>
+							<td id="result-rgba-option"></td>
+							<td id="example-rgba-option"></td>
+						</tr>
+						<tr>
+							<td>toRGBA()</td>
+							<td id="result-rgba-optionless"></td>
+							<td id="example-rgba-optionless"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="container">
+			<p>Colorhole is an pretty simple, lightweight, dependency-free library which allows you to manage color like it can be done for any other default data type. Library allows work with HEX colors (16 and 256 colors as well) but data can be easily exported as HEX and RGBA. You can try it http://tryshchenko.com/examples/colorhole Library can: </p>
+			<ul>
+				<li>Make a color lighter</li>
+				<li>Make a color darken</li>
+				<li>Inverse color</li>
+				<li>Discolor</li>
+				<li>Export values as RGBa and set opacity</li>
+				<li>Allows chaining</li>
+				<li>Works as commonjs module as well</li>
+				<li>Written in ES5, so is compatible with all modern (and not much modern) browsers.</li>
+			</ul>
+			<p>
+				It's safe. You can pass anything into the constructor, in the case of unexpected value - library will throw warning message into the console and keep white color as default - your application still be working.
+			</p>
+			<a href="https://github.com/ensaier/colorhole" class="btn btn-primary" target="_blank">Read instructions on GitHub</a>
+			<a href="http://tryshchenko.com" class="btn btn-primary" target="_blank">Read my blog</a>
+			<p>
+				Developed by Oleksandr Tryshchenko (2016). Licenced under MIT licence.
+			</p>
+		</div>
+	</div>
+</body>
+</html>
