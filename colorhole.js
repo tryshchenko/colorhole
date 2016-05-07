@@ -101,9 +101,7 @@ var Colorhole = (function(){
 			var values = [];
 			var result = 0;
 			var total = 0;
-			if (!this.picked) {
-				console.warn('Color is not set');
-			}
+
 			this.schema.forEach(function(chanel){
 				values.push(this[chanel]);
 			}.bind(this));
