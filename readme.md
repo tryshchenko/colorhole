@@ -69,4 +69,4 @@ var myColor = new Colorhole('#0FC311');
 var firstColorRGBA = myColor.toRGBA(0.3);
 var secondColor = myColor.pick('#FFAAFF').darken(2).toString();
 ```
-Licenced under MIT licence.
+Licenced under MIT licence
