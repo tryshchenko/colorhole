@@ -120,6 +120,33 @@ var Colorhole = (function(){
 		},
 
 		/**
+		 * Get the closer extreme value
+		 * @return {Object} Return self for chaining
+		 */
+		closerExtreme: function() {
+			var primary = 255;
+			var result = 0;
+			var total = 0;
+
+			this.schema.forEach(function(chanel){
+				total += this[chanel];
+			}.bind(this));
+
+			result = total / this.schema.length;
+
+			if (result > 150) {
+				primary = 0;
+			}
+
+			this.schema.forEach(function(chanel){
+				this[chanel] = primary;
+			}.bind(this));
+			this.toString();
+
+			return this;
+		},
+
+		/**
 		 * Makes HEX color from RGB integers. I know it's replaces the native toString method. 
 		 * It's not a bug it's a feature.
 		 * User can call toString like it's the native data type and receive an expected result.

@@ -37,6 +37,12 @@
 		document.querySelector('#result-grayscale-optionless').innerHTML = result;
 	}
 
+	var harmonizeOptionless = function(color) {
+		var result = new Colorhole(color).harmonize().color;
+		document.querySelector('#example-harmonize-optionless').style.backgroundColor = result;
+		document.querySelector('#result-harmonize-optionless').innerHTML = result;
+	}
+
 	var toRGBA = function(color) {
 		var result = new Colorhole(color).toRGBA(0.5);
 		document.querySelector('#result-rgba-option').innerHTML = result;
@@ -61,6 +67,7 @@
 		lighterOption(color);
 		inverseOptionless(color);
 		grayscaleOptionless(color);
+		harmonizeOptionless(color);
 		toRGBA(color);
 		toRGBAOptionless(color);
 	}
