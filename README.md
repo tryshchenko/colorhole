@@ -58,7 +58,7 @@ Arguments not required for inverse method
 var myColor = new Colorhole('#0FC311').grayscale();
 ```
 
-### Find the closes extreme value
+### Find the closest extreme value
 .closestExtreme() method allows you to find closest extreme contrast color (black and white).
 The main purpose of this function - pick a color for labels over another color (white over dark color, or black over light color);
 Arguments not required for closestExtreme method
