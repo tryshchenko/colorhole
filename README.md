@@ -26,6 +26,8 @@ myColor.green // 0 - 255
 myColor.blue // 0 - 255
 // Build it back into the HEX
 myColor.toString();
+// Get HEX string
+myColor.color
 ```
 ### Make a color darken
 You can easily make color darken: just call .darken() method.
@@ -55,6 +57,15 @@ Arguments not required for inverse method
 ```javascript
 var myColor = new Colorhole('#0FC311').grayscale();
 ```
+
+### Find the closes extreme value
+.closestExtreme() method allows you to find closest extreme contrast color (black and white).
+The main purpose of this function - pick a color for labels over another color (white over dark color, or black over light color);
+Arguments not required for closestExtreme method
+```javascript
+var myColor = new Colorhole('#172A3F').closestExtreme().color //#ffffff;
+```
+
 ### Make RGBA
 Work in the same way like .toString() method but returns RGBA value.
 Can take opacity as argument, otherwise uses '1' as default value
