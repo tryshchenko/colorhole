@@ -21,6 +21,15 @@ var Colorhole = (function(){
 	}
 
 	/**
+	 * Encapsuled absolute rounding
+	 * @param  {integer} number
+	 * @return {integer}
+	 */
+	var round = function(number) {
+		return Math.abs(Math.floor(number));
+	}
+
+	/**
 	 * All logic hidden into prototype
 	 * @type {Object}
 	 */
@@ -56,7 +65,7 @@ var Colorhole = (function(){
 		darken: function(multiplier) {
 			multiplier = multiplier || 2;
 			this.schema.forEach(function(chanel){
-				this[chanel] = Math.abs(Math.floor(this[chanel] / multiplier));
+				this[chanel] = round(this[chanel] / multiplier);
 			}.bind(this));
 			this.toString();
 
@@ -72,7 +81,7 @@ var Colorhole = (function(){
 			multiplier = multiplier || 2;
 			this.schema.forEach(function(chanel){
 				var difference = ((255 - this[chanel]) / multiplier) * (multiplier - 1);
-				var result = Math.abs(Math.floor(this[chanel] + difference));
+				var result = round(this[chanel] + difference);
 				this[chanel] = result;
 			}.bind(this));
 			this.toString();
@@ -86,7 +95,7 @@ var Colorhole = (function(){
 		 */
 		inverse: function() {
 			this.schema.forEach(function(chanel){
-				this[chanel] = Math.abs(Math.floor(255 - this[chanel]));
+				this[chanel] = round(255 - this[chanel]);
 			}.bind(this));
 			this.toString();
 
@@ -110,7 +119,7 @@ var Colorhole = (function(){
 				return a + b;
 			}, 0);
 
-			result = Math.abs(Math.floor(total / this.schema.length));
+			result = round(total / this.schema.length);
 			this.schema.forEach(function(chanel){
 				this[chanel] = result;
 			}.bind(this));

@@ -67,14 +67,14 @@
 		lighterOption(color);
 		inverseOptionless(color);
 		grayscaleOptionless(color);
-		harmonizeOptionless(color);
+		// harmonizeOptionless(color);
 		toRGBA(color);
 		toRGBAOptionless(color);
 	}
 
 	var onColorChange = function(event) {
 		var color = event.target.value;
-		runExamples(color)		
+		runExamples(color);
 	}
 
 	window.onload = function() {
